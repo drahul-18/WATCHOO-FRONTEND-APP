@@ -1,0 +1,24 @@
+.carousel-section {
+  padding: 24px 0 48px;
+  padding-left: 48px;
+}
+
+.carousel-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--netflix-text);
+  margin: 0 0 16px 0;
+}
+
+.carousel {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}

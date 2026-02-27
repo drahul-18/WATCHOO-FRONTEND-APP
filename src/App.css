@@ -1,0 +1,21 @@
+/* Netflix theme colors */
+:root {
+  --netflix-bg: #141414;
+  --netflix-bg-secondary: #181818;
+  --netflix-red: #E50914;
+  --netflix-text: #FFFFFF;
+  --netflix-text-secondary: #808080;
+  --netflix-border: #333333;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--netflix-bg);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 80px;
+  min-height: 100vh;
+}

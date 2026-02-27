@@ -1,16 +1,68 @@
-# React + Vite
+# WATCHOO - Netflix-Style Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React frontend that fetches movie and TV data from [TMDB](https://www.themoviedb.org/) and displays it in a Netflix-style landing page.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repo and install dependencies:
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Create a `.env` file in the project root (copy from `.env.example`):
 
-## Expanding the ESLint configuration
+```
+VITE_TMDB_API_KEY=your_api_key_here
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Get your free API key at [TMDB Settings](https://www.themoviedb.org/settings/api).
+
+3. Run locally:
+
+```bash
+npm run dev
+```
+
+## Deploy to Vercel
+
+### First-time setup
+
+1. Push your code to GitHub and connect the repo to [Vercel](https://vercel.com).
+2. In Vercel, go to your project → **Settings** → **Environment Variables**.
+3. Add:
+   - **Name:** `VITE_TMDB_API_KEY`
+   - **Value:** Your TMDB API key
+   - **Environments:** Production, Preview, Development (check all)
+4. Click **Save**.
+
+### Redeploy after adding env var
+
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard).
+2. Open your **WATCHOO-FRONTEND-APP** project.
+3. Go to the **Deployments** tab.
+4. Find the latest deployment and click the **⋮** (three dots) menu.
+5. Click **Redeploy**.
+6. Confirm with **Redeploy** again.
+
+Vercel will rebuild and deploy with the new environment variable.
+
+### Redeploy after code changes
+
+Push to GitHub and Vercel will auto-deploy:
+
+```bash
+git add .
+git commit -m "Your message"
+git push origin master
+```
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build |
+| `npm run test` | Run tests |
+| `npm run verify` | Run tests + build |
